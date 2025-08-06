@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REX-O Defence Systems</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
+    </div>
+  <div class="nav-right">
+    <img src="logo.jpg" alt="REX-O Logo" />
+  </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <h1 class="fade">REX-O Defence Systems</h1>
+    <p class="fade">AI-Powered Kamikaze USVs for Maritime Defence</p>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2 class="section-title fade">About REX-O</h2>
+      <p class="fade">REX-O revolutionizes naval warfare with autonomous, AI-powered kamikaze USVs that offer real-time surveillance, precision strikes, and swarm deployment. Designed for modern asymmetric warfare, they’re low-cost, scalable, and ideal for coastal defense.</p>
+    </div>
+    <div class="about-image">
+      <img class="fade" src="media1.jpg" alt="REX-O Visual"/>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2 class="section-title fade">Features</h2>
+    <div class="feature-grid">
+      <div class="feature-item fade">
+        <img src="https://img.icons8.com/ios-filled/50/robot-2.png" alt="AI">
+        <p>AI Navigation</p>
+        <div class="feature-desc">Intelligent pathfinding & obstacle avoidance using real-time AI.</div>
+      </div>
+      <div class="feature-item fade">
+        <img src="https://img.icons8.com/ios-filled/50/group-objects.png" alt="Swarm">
+        <p>Swarm Coordination</p>
+        <div class="feature-desc">Multiple USVs operate in synchrony for strategic advantage.</div>
+      </div>
+      <div class="feature-item fade">
+        <img src="https://img.icons8.com/ios-filled/50/video.png" alt="Surveillance">
+        <p>Live Surveillance</p>
+        <div class="feature-desc">High-definition real-time monitoring of target zones.</div>
+      </div>
+      <div class="feature-item fade">
+        <img src="https://img.icons8.com/ios-filled/50/missile.png" alt="Missile">
+        <p>Precision Strike</p>
+        <div class="feature-desc">Autonomous target locking and low-collateral execution.</div>
+      </div>
+    </div>
+  </section>
+
+ <section class="media" id="media">
+  <h2 class="section-title fade">Media Gallery</h2>
+  
+  <div class="media-row fade">
+    <img src="media3.jpg" alt="REX-O Photo 1">
+    <img src="media2.jpg" alt="REX-O Photo 2">
+  </div>
+  
+  <div class="media-row fade">
+    <iframe 
+  width="560" 
+  height="315"
+  src="https://drive.google.com/file/d/1Y0vuRi9umgz1LSvY5nfwE2K07psmQjr-/preview" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
+  </div>
+</section>
+
+
+  <section class="contact" id="contact">
+    <div class="contact-left">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="contact-center">
+      <p>Email: rexodefence@gmail.com</p>
+      <p>Phone: +91 97033-54388</p>
+    </div>
+    <div class="contact-right">
+      <p>We’re open to defence partnerships, innovation pilots, and institutional collaborations.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 REX-O Defence Systems. All Rights Reserved.
+  </footer>
+
+ <script>
+  const sections = document.querySelectorAll("section");
+  const fadeItems = document.querySelectorAll(".fade");
+
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(section => sectionObserver.observe(section));
+  fadeItems.forEach(el => fadeObserver.observe(el));
+</script>
+</body>
+</html>
